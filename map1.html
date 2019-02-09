@@ -20,7 +20,8 @@ window.onload = function() {
 	map.addIcon(35.943560,136.188917, "鯖江駅")
 	map.addIcon(35.946696,136.181924, "西鯖江駅")
 　　　　 map.addIcon(35.944605,136.186234, "hana道場" , "icon-megane.png",64)
-		// SPARQLクエリー
+		
+	// SPARQLクエリー
 	var query = `
 		prefix ic: <http://imi.go.jp/ns/core/rdf#>
 		prefix xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -37,7 +38,7 @@ window.onload = function() {
 			var lat = item.lat.value;
 			var lng = item.lng.value;
 			var name = item.name.value;
-			map.addIcon(lat, lng, name)
+			map.addIcon(lat, lng, name, "icon-carparking.png" , 40 , 40)
 		}
 	});
 }
